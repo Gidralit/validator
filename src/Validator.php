@@ -2,12 +2,6 @@
 
 namespace Gidralit\Validators;
 
-use Validators\MaxValidator;
-use Validators\MinValidator;
-use Validators\RequiredValidator;
-use Validators\StringValidator;
-use Validators\UniqueValidator;
-
 class Validator
 {
     private array $validators = [];
@@ -21,7 +15,7 @@ class Validator
         array $rules,
         array $messages = []
     ) {
-        $this->validators = array_merge($this->getDefaultValidators(), $this->getDefaultValidators());
+        $this->validators = $this->getDefaultValidators();
         $this->fields = $fields;
         $this->rules = $rules;
         $this->messages = $messages;
@@ -31,11 +25,11 @@ class Validator
     private function getDefaultValidators(): array
     {
         return [
-            'required' => RequiredValidator::class,
-            'string' => StringValidator::class,
-            'min' => MinValidator::class,
-            'max' => MaxValidator::class,
-            'unique' => UniqueValidator::class,
+            'required' => \Validators\RequiredValidator::class,
+            'string' => \Validators\StringValidator::class,
+            'min' => \Validators\MinValidator::class,
+            'max' => \Validators\MaxValidator::class,
+            'unique' => \Validators\UniqueValidator::class,
         ];
     }
 
