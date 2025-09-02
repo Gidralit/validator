@@ -2,7 +2,7 @@
 
 namespace Validators;
 
-use Src\Validator\AbstractValidator;
+use Gidralit\Validators\AbstractValidator;
 
 class StringValidator extends AbstractValidator
 {

@@ -2,8 +2,8 @@
 
 namespace Validators;
 
+use Gidralit\Validators\AbstractValidator;
 use Illuminate\Database\Capsule\Manager as Capsule;
-use Src\Validator\AbstractValidator;
 
 class UniqueValidator extends AbstractValidator
 {
