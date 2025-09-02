@@ -17,9 +17,6 @@
   "autoload": {
     "psr-4": {
       "Validate\\": "src/"
-    },
-    "files": [
-      "src/helpers.php"
-    ]
+    }
   }
 }
