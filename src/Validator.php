@@ -19,10 +19,9 @@ class Validator
     public function __construct(
         array $fields,
         array $rules,
-        array $messages = [],
-        array $customValidators = []
+        array $messages = []
     ) {
-        $this->validators = array_merge($this->getDefaultValidators(), $customValidators);
+        $this->validators = array_merge($this->getDefaultValidators(), $this->getDefaultValidators());
         $this->fields = $fields;
         $this->rules = $rules;
         $this->messages = $messages;
@@ -87,10 +86,5 @@ class Validator
     public function fails(): bool
     {
         return count($this->errors) > 0;
-    }
-
-    public function addValidator(string $name, string $validatorClass): void
-    {
-        $this->validators[$name] = $validatorClass;
     }
 }
