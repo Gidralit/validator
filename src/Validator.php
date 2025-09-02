@@ -2,6 +2,12 @@
 
 namespace Gidralit\Validators;
 
+use Validators\MaxValidator;
+use Validators\MinValidator;
+use Validators\RequiredValidator;
+use Validators\StringValidator;
+use Validators\UniqueValidator;
+
 class Validator
 {
     private array $validators = [];
