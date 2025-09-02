@@ -1,0 +1,25 @@
+{
+  "name": "gidralit/validator-praktika",
+  "description": "Валидация",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "федька",
+      "email": "feodorkrutkin23@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.0 | ^8.0",
+    "illuminate/database": "10.x-dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Validate\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  }
+}
